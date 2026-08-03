@@ -1,1 +1,5 @@
 
+User-agent: *
+Allow: /
+
+Sitemap: https://gemwebster.github.io/GHSJoinery/sitemap.xml
