@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -11,64 +15,68 @@ body {
     background: #ffffff;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 
 .site-header {
     background: #7d7d7d;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 12px 30px;
+    padding: 20px;
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-}
-
+/* Desktop logo */
 .logo-desktop {
     display: block;
-    height: 70px;
+    height: 90px;
     width: auto;
 }
 
+/* Hidden until mobile */
 .logo-mobile {
     display: none;
 }
 
-/* Navigation */
+/* =========================
+   NAVIGATION
+========================= */
 
-.nav-menu{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    margin-top:20px;
-    padding:0;
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0;
 }
 
-.nav-menu li{
-    margin:0;
+.nav-menu li {
+    list-style: none;
 }
 
-.nav-menu a{
-    display:block;
-    padding:12px 24px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    border:2px solid rgba(255,255,255,0.4);
-    border-radius:30px;
-    transition:all 0.3s ease;
+.nav-menu a {
+    display: block;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.nav-menu a:hover{
-    background:white;
-    color:#7d7d7d;
+.nav-menu a:hover {
+    background: white;
+    color: #7d7d7d;
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     text-align: center;
@@ -82,7 +90,7 @@ body {
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -106,7 +114,9 @@ body {
     color: #7d7d7d;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
     padding: 80px 20px;
@@ -114,7 +124,7 @@ body {
 
 .container {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .grey {
@@ -126,7 +136,9 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* Services */
+/* =========================
+   SERVICES
+========================= */
 
 .services {
     display: grid;
@@ -137,12 +149,14 @@ h2 {
 .card {
     background: white;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-/* Gallery */
+/* =========================
+   GALLERY
+========================= */
 
 .gallery {
     display: grid;
@@ -152,12 +166,14 @@ h2 {
 
 .gallery img {
     width: 100%;
-    height: 300px;
+    height: 320px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-links {
     text-align: center;
@@ -168,9 +184,12 @@ h2 {
     margin: 15px 0;
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #222;
@@ -179,14 +198,11 @@ footer {
     padding: 25px;
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
-
-    .site-header {
-        flex-direction: column;
-        gap: 15px;
-    }
 
     .logo-desktop {
         display: none;
@@ -194,14 +210,17 @@ footer {
 
     .logo-mobile {
         display: block;
-        width: 130px;
+        width: 140px;
         height: auto;
     }
 
-    .site-header nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 
     .hero h1 {
