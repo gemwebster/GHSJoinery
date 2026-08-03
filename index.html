@@ -192,6 +192,54 @@
     </p>
 
 </footer>
+<script>
 
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-track img');
+
+if(track && slides.length > 0){
+
+    let currentSlide = 0;
+
+    function updateSlide(){
+        track.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
+    }
+
+    document.querySelector('.next').addEventListener('click', () => {
+        currentSlide++;
+
+        if(currentSlide >= slides.length){
+            currentSlide = 0;
+        }
+
+        updateSlide();
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        currentSlide--;
+
+        if(currentSlide < 0){
+            currentSlide = slides.length - 1;
+        }
+
+        updateSlide();
+    });
+
+    setInterval(() => {
+
+        currentSlide++;
+
+        if(currentSlide >= slides.length){
+            currentSlide = 0;
+        }
+
+        updateSlide();
+
+    }, 5000);
+
+}
+
+</script>
 </body>
 </html>
