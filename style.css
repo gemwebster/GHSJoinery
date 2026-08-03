@@ -1,185 +1,137 @@
-*{
-    margin:0;
-    padding:0;
-   *box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-  * scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-*   font-family:'Montserrat',sans-s*rif;
-    color:#333;
-    backgroun*:#fff;
-    line-height:1.7;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #333333;
+    line-height: 1.7;
 }
 
-.co*tainer{
-    max-width:1200px;
-    *argin:auto;
-    padding:0 20px;
-}
-*.narrow{
-    max-width:850px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-h*ader{
-    background:white;
-    bo*der-bottom:1px solid #eee;
-    pos*tion:sticky;
-    top:0;
-    z-inde*:1000;
+.narrow {
+    max-width: 800px;
 }
 
-.nav{
-    display:flex;
-*   justify-content:space-between;
-*   align-items:center;
-    padding*15px 20px;
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo{
-    width:140*x;
-    height:auto;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 }
 
-nav a{
-    *ext-decoration:none;
-    color:#55*;
-    font-weight:500;
-    margin-*eft:25px;
+.logo {
+    width: 90px;
+    height: auto;
 }
 
-nav a:hover{
-    colo*:#888;
+nav a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 25px;
+    font-weight: 500;
 }
 
-.hero{
-    min-height:75*h;
-    background:#8a8a8a;
-    dis*lay:flex;
-    justify*content:center;
-    align-items:ce*ter;
-    text-align:center;
-    co*or:white;
-    padding:40px 20px;
-}*
-.hero-content{
-    max-width:800p*;
+nav a:hover {
+    color: #888;
 }
 
-.hero h1{
-    font*size:3rem;
-    font-weight:300;
-  * margin-bottom:20px;
+.hero {
+    background: #808080;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
 }
 
-.hero p*
-    font*size:1.1*em;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
-*buttons*
-    margin-top:35px;
+.hero p {
+    max-width: 700px;
+    margin: auto;
 }
 
-.btn{
-   *display:inline-block;
-    padding:*4px 30px;
-    background:white;
-  * color:#444;
-    text-decoration:n*ne;
-    border-radius:50px;
-    ma*gin:5px;
-    font-weight:600;
+.hero-buttons {
+    margin-top: 30px;
 }
 
-.*tn-outline{
-    background:transpa*ent;
-    border:2px solid white;
- *  color:white;
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: white;
+    color: #333;
+    font-weight: 600;
+    margin: 5px;
 }
 
-.section{
-    pa*ding:90px 0;
+.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
 }
 
-.grey{
-    backgro*nd:#f7f7f7;
+.section {
+    padding: 80px 0;
 }
 
-h2{
-    text-align:*enter;
-    font-size:2rem;
-    fon*-weight:400;
-    margin-bottom:40p*;
+.light {
+    background: #f6f6f6;
 }
 
-.services{
-    display:grid;
-*   grid-template-columns:repeat(au*o-fit,minmax(220px,1fr));
-    gap:*0px;
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
-.service-card{
-    backgro*nd:white;
-    padding:40px 20px;
- *  border-radius:10px;
-    text-ali*n:center;
-    box-shadow:0 6px 18p* rgba(0,0,0,0.07);
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-.gallery{
-  * display:grid;
-    grid*template-columns:repeat(auto-fit,m*nmax(300px,1fr));
-    gap:20px;
-}
-*.gallery img{
-    width:100%;
-    *eight:300px;
-    object*fit:cover*
-    border-radius:10px;
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.conta*t-links{
-    margin-top:30px;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.*ontact-links a{
-    display*block*
-    text-decoration:none;
-    col*r:#555;
-    padding:15px;
-    font*weight:500;
-}
-
-footer*
-    background:#222;
-    color:wh*te;
-    text-align:center;
-    pad*ing:25px;
-}
-
-@media*max-width:768px){
-
-    .nav{
-     *  flex-direction:column;
-       *gap:15px;
-    }
-
-    nav a{
-      * margin*0 10px;
-    }
-
-    .*ero h1{
-        font-size:2rem;
-  * }
-
-    .logo{
-        width:110px*
-    }
-
-    .*allery img{
-        height:250px;
-*   }
-}
+.gallery img {
+    width: 100%;
+    
