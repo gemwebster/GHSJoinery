@@ -1,149 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
 *{
     margin:0;
-    padding:0;*    box-sizing:border-box;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html*
-    scroll-behavior:smooth;
-}
-
-bo*y{
-    font-family:'Poppins',sans-*erif;
+body{
+    font-family:Arial, sans-serif;
     color:#333;
-    backgrou*d:#fff;
-    line-height:1.7;
+    line-height:1.6;
 }
 
-.s*te-header{
-    background:#7e7e7e;*    display:flex;
-    justify-cont*nt:space-between;
-    align-items:*enter;
+.site-header{
+    background:#7d7d7d;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     padding:15px 40px;
-    *osition:sticky;
-    top:0;
-    z-i*dex:1000;
+}
+
+.logo-link{
+    display:block;
 }
 
 .logo-desktop{
-    he*ght:90px;
+    display:block;
+    height:70px;
     width:auto;
-    disp*ay:block;
 }
 
 .logo-mobile{
-    dis*lay:none;
+    display:none;
 }
 
 .site-header nav{
-   *display:flex;
+    display:flex;
     gap:30px;
 }
 
-.si*e-header nav a{
+.site-header nav a{
     color:white;
- *  text-decoration:none;
-    font-w*ight:500;
-}
-
-.site-header nav a:ho*er{
-    opacity:0.8;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 .hero{
-   *text-align:center;
-    padding:100*x 20px;
+    text-align:center;
+    padding:80px 20px;
     background:#f5f5f5;
 }
-*.hero h1{
-    font-size:3rem;
-    *argin-bottom:20px;
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
 }
 
 .hero p{
-   *max-width:700px;
+    max-width:700px;
     margin:auto;
-*
+}
 
 .hero-buttons{
-    margin-top:30*x;
+    margin-top:30px;
 }
 
 .button{
-    display:inline-*lock;
+    display:inline-block;
+    background:#7d7d7d;
+    color:white;
     text-decoration:none;
-  * padding:14px 28px;
-    border-rad*us:40px;
-    background:#7e7e7e;
- *  color:white;
+    padding:12px 25px;
+    border-radius:30px;
     margin:5px;
 }
 
-*outline{
+.button-outline{
     background:white;
-   *color:#7e7e7e;
-    border:2px soli* #7e7e7e;
+    border:2px solid #7d7d7d;
+    color:#7d7d7d;
 }
 
 .section{
-    padding*80px 20px;
+    padding:80px 20px;
 }
 
 .container{
-    max-*idth:1200px;
+    max-width:1100px;
     margin:auto;
 }
 
-.*arrow{
-    max-width:850px;
-}
-
-.gr*y{
+.grey{
     background:#f7f7f7;
 }
 
 h2{
-*   text-align:center;
-    margin-b*ttom:40px;
-    font-size:2rem;
+    text-align:center;
+    margin-bottom:40px;
 }
 
-*services{
+.services{
     display:grid;
-    gr*d-template-columns:repeat(auto-fit*minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
-*
+}
 
 .card{
     background:white;
-   *padding:35px;
-    border-radius:10*x;
+    padding:30px;
+    border-radius:10px;
     text-align:center;
-    box-*hadow:0 4px 15px rgba(0,0,0,0.08);*}
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
 
 .gallery{
     display:grid;
-   *grid-template-columns:repeat(auto-*it,minmax(300px,1fr));
-    gap:20p*;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
 }
 
 .gallery img{
-    width:100%;*    height:320px;
-    object-fit:c*ver;
+    width:100%;
+    height:300px;
+    object-fit:cover;
     border-radius:10px;
 }
 
-.c*ntact-links{
-    text-align:center*
+.contact-links{
+    text-align:center;
 }
 
 .contact-links a{
-    display:*lock;
+    display:block;
     margin:15px 0;
-    color*#444;
     text-decoration:none;
-  * font-size:1.1rem;
+    color:#333;
 }
 
 footer{
@@ -153,9 +142,12 @@ footer{
     padding:25px;
 }
 
-/* MOBILE */
-
 @media (max-width:768px){
+
+    .site-header{
+        flex-direction:column;
+        gap:15px;
+    }
 
     .logo-desktop{
         display:none;
@@ -163,28 +155,17 @@ footer{
 
     .logo-mobile{
         display:block;
-        width:140px;
+        width:130px;
         height:auto;
     }
 
-    .site-header{
-        flex-direction:column;
-        padding:20px;
-    }
-
     .site-header nav{
+        gap:15px;
         flex-wrap:wrap;
         justify-content:center;
-        gap:15px;
-        margin-top:15px;
     }
 
     .hero h1{
-        font-size:2rem;
+        font-size:32px;
     }
-
-    .gallery img{
-        height:220px;
-    }
-
 }
