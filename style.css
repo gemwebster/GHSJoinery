@@ -180,7 +180,7 @@ h2 {
    GALLERY
 ========================= */
 
-.gallery {
+/*.gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -191,7 +191,7 @@ h2 {
     height: 320px;
     object-fit: cover;
     border-radius: 10px;
-}
+}*/
 .carousel{
     position:relative;
     max-width:1000px;
