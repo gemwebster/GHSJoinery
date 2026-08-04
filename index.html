@@ -207,8 +207,9 @@ content="GHS Joinery is a Forfar based joinery business covering Angus, Dundee, 
 </footer>
 
 
-      <!-- Script for smooth scrolling-->
+     
     <script>
+       /* smooth scrolling*/  
 const topButton = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
@@ -222,32 +223,7 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-   <!--Script for gallery
-    <script>
-
-        const galleryImages = document.querySelectorAll('.carousel-track img');
-
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightbox-image');
-
-        galleryImages.forEach(image => {
-
-            image.addEventListener('click', () => {
-
-            lightbox.style.display = 'flex';
-            lightboxImage.src = image.src;
-
-            });
-
-        });
-
-    lightbox.addEventListener('click', () => {
-
-        lightbox.style.display = 'none';
-
-    });-->
-
-</script>
+   
 
   <script>
 
@@ -276,6 +252,8 @@ window.addEventListener('scroll', () => {
 const track = document.querySelector('.carousel-track');
 const slides = document.querySelectorAll('.carousel-track img');
 
+if(track && slides.length){
+
 let currentSlide = 0;
 
 function updateSlide(){
@@ -293,7 +271,8 @@ document.querySelector('.next').addEventListener('click', () => {
 
     updateSlide();
 
-});
+})
+};
 
 document.querySelector('.prev').addEventListener('click', () => {
 
