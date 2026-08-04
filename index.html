@@ -330,6 +330,8 @@ slides.forEach((img,index) => {
         currentImage = index;
 
         lightboxImage.src = slides[currentImage].src;
+     lightboxImage.alt = slides[currentImage].alt;
+     lightboxCaption.textContent = slides[currentImage].alt;
 
         lightbox.style.display = 'flex';
 
