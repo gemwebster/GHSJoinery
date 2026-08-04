@@ -27,6 +27,32 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+    /* Script for gallery*/
+    <script>
+
+        const galleryImages = document.querySelectorAll('.carousel-track img');
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+
+        galleryImages.forEach(image => {
+
+            image.addEventListener('click', () => {
+
+            lightbox.style.display = 'flex';
+            lightboxImage.src = image.src;
+
+            });
+
+        });
+
+    lightbox.addEventListener('click', () => {
+
+        lightbox.style.display = 'none';
+
+    });
+
+</script>
 
     
 <body id="top">
@@ -211,6 +237,8 @@ window.addEventListener('scroll', () => {
     </p>
 
 </footer>
+
+    /* ****************All the random scripts for the image gallery*/
 <script>
 
 const track = document.querySelector('.carousel-track');
@@ -260,6 +288,19 @@ if(track && slides.length > 0){
 }
 
 </script>
+
+
+    <div id="lightbox" class="lightbox">
+
+    <button class="lightbox-btn lightbox-prev">&#10094;</button>
+
+    <img id="lightbox-image" class="lightbox-image">
+
+    <button class="lightbox-btn lightbox-next">&#10095;</button>
+
+    <span class="lightbox-close">&times;</span>
+
+</div>
 
     <script type="application/ld+json">
 {
