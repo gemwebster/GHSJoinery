@@ -310,6 +310,7 @@ setInterval(() => {
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
+const lightboxCaption = document.getElementById('lightbox-caption');
 
 const nextImageBtn =
     document.querySelector('.lightbox-next');
@@ -338,7 +339,9 @@ slides.forEach((img,index) => {
 
 function showImage(){
 
-    lightboxImage.src = slides[currentImage].src;
+      lightboxImage.src = slides[currentImage].src;
+      lightboxImage.alt = slides[currentImage].alt;
+     lightboxCaption.textContent = slides[currentImage].alt;
 
 }
 
