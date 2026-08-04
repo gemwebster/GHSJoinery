@@ -12,6 +12,23 @@ content="GHS Joinery is a Forfar based joinery business covering Angus, Dundee, 
 <link rel="stylesheet" href="style.css">
 </head>
 
+    /*script for scrolling smooth*/
+    <script>
+const topButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 400){
+        topButton.style.opacity = '1';
+        topButton.style.pointerEvents = 'auto';
+    } else {
+        topButton.style.opacity = '0';
+        topButton.style.pointerEvents = 'none';
+    }
+});
+</script>
+
+
+    
 <body id="top">
 
 <header class="site-header">
