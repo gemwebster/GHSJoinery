@@ -160,6 +160,13 @@ body {
     color: #7d7d7d;
 }
 
+
+button:focus,
+a:focus{
+    outline:3px solid #005fcc;
+    outline-offset:2px;
+}
+
 /* =========================
    SECTIONS
 ========================= */
