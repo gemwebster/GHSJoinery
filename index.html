@@ -12,49 +12,7 @@ content="GHS Joinery is a Forfar based joinery business covering Angus, Dundee, 
 <link rel="stylesheet" href="style.css">
 </head>
 
-    /*script for scrolling smooth*/
-    <script>
-const topButton = document.querySelector('.back-to-top');
-
-window.addEventListener('scroll', () => {
-    if(window.scrollY > 400){
-        topButton.style.opacity = '1';
-        topButton.style.pointerEvents = 'auto';
-    } else {
-        topButton.style.opacity = '0';
-        topButton.style.pointerEvents = 'none';
-    }
-});
-</script>
-
-    /* Script for gallery*/
-    <script>
-
-        const galleryImages = document.querySelectorAll('.carousel-track img');
-
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightbox-image');
-
-        galleryImages.forEach(image => {
-
-            image.addEventListener('click', () => {
-
-            lightbox.style.display = 'flex';
-            lightboxImage.src = image.src;
-
-            });
-
-        });
-
-    lightbox.addEventListener('click', () => {
-
-        lightbox.style.display = 'none';
-
-    });
-
-</script>
-
-    
+     
 <body id="top">
 
 <header class="site-header">
@@ -228,69 +186,7 @@ window.addEventListener('scroll', () => {
     </div>
 
 </section>
-
-    <a href="#top" class="back-to-top">↑</a>
-<footer>
-
-    <p>
-        © GHS Joinery | Forfar, Angus, Scotland
-    </p>
-
-</footer>
-
-    /* ****************All the random scripts for the image gallery*/
-<script>
-
-const track = document.querySelector('.carousel-track');
-const slides = document.querySelectorAll('.carousel-track img');
-
-if(track && slides.length > 0){
-
-    let currentSlide = 0;
-
-    function updateSlide(){
-        track.style.transform =
-            `translateX(-${currentSlide * 100}%)`;
-    }
-
-    document.querySelector('.next').addEventListener('click', () => {
-        currentSlide++;
-
-        if(currentSlide >= slides.length){
-            currentSlide = 0;
-        }
-
-        updateSlide();
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        currentSlide--;
-
-        if(currentSlide < 0){
-            currentSlide = slides.length - 1;
-        }
-
-        updateSlide();
-    });
-
-    setInterval(() => {
-
-        currentSlide++;
-
-        if(currentSlide >= slides.length){
-            currentSlide = 0;
-        }
-
-        updateSlide();
-
-    }, 5000);
-
-}
-
-</script>
-
-
-    <div id="lightbox" class="lightbox">
+ <div id="lightbox" class="lightbox">
 
     <button class="lightbox-btn lightbox-prev">&#10094;</button>
 
@@ -301,6 +197,230 @@ if(track && slides.length > 0){
     <span class="lightbox-close">&times;</span>
 
 </div>
+    <a href="#top" class="back-to-top">↑</a>
+<footer>
+
+    <p>
+        © GHS Joinery | Forfar, Angus, Scotland
+    </p>
+
+</footer>
+
+
+      <!-- Script for smooth scrolling-->
+    <script>
+const topButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 400){
+        topButton.style.opacity = '1';
+        topButton.style.pointerEvents = 'auto';
+    } else {
+        topButton.style.opacity = '0';
+        topButton.style.pointerEvents = 'none';
+    }
+});
+</script>
+
+   <!--Script for gallery
+    <script>
+
+        const galleryImages = document.querySelectorAll('.carousel-track img');
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+
+        galleryImages.forEach(image => {
+
+            image.addEventListener('click', () => {
+
+            lightbox.style.display = 'flex';
+            lightboxImage.src = image.src;
+
+            });
+
+        });
+
+    lightbox.addEventListener('click', () => {
+
+        lightbox.style.display = 'none';
+
+    });-->
+
+</script>
+
+  <script>
+
+/* Back To Top */
+
+const topButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+
+    if(window.scrollY > 400){
+
+        topButton.style.opacity = '1';
+        topButton.style.pointerEvents = 'auto';
+
+    } else {
+
+        topButton.style.opacity = '0';
+        topButton.style.pointerEvents = 'none';
+
+    }
+
+});
+
+/* Carousel */
+
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-track img');
+
+let currentSlide = 0;
+
+function updateSlide(){
+    track.style.transform =
+        `translateX(-${currentSlide * 100}%)`;
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    updateSlide();
+
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+
+    currentSlide--;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    updateSlide();
+
+});
+
+setInterval(() => {
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    updateSlide();
+
+}, 5000);
+
+/* Lightbox */
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+
+const nextImageBtn =
+    document.querySelector('.lightbox-next');
+
+const prevImageBtn =
+    document.querySelector('.lightbox-prev');
+
+const closeBtn =
+    document.querySelector('.lightbox-close');
+
+let currentImage = 0;
+
+slides.forEach((img,index) => {
+
+    img.addEventListener('click', () => {
+
+        currentImage = index;
+
+        lightboxImage.src = slides[currentImage].src;
+
+        lightbox.style.display = 'flex';
+
+    });
+
+});
+
+function showImage(){
+
+    lightboxImage.src = slides[currentImage].src;
+
+}
+
+nextImageBtn.addEventListener('click', (e) => {
+
+    e.stopPropagation();
+
+    currentImage++;
+
+    if(currentImage >= slides.length){
+        currentImage = 0;
+    }
+
+    showImage();
+
+});
+
+prevImageBtn.addEventListener('click', (e) => {
+
+    e.stopPropagation();
+
+    currentImage--;
+
+    if(currentImage < 0){
+        currentImage = slides.length - 1;
+    }
+
+    showImage();
+
+});
+
+closeBtn.addEventListener('click', () => {
+
+    lightbox.style.display = 'none';
+
+});
+
+lightbox.addEventListener('click', (e) => {
+
+    if(e.target === lightbox){
+
+        lightbox.style.display = 'none';
+
+    }
+
+});
+
+document.addEventListener('keydown', (e) => {
+
+    if(lightbox.style.display === 'flex'){
+
+        if(e.key === 'ArrowRight'){
+            nextImageBtn.click();
+        }
+
+        if(e.key === 'ArrowLeft'){
+            prevImageBtn.click();
+        }
+
+        if(e.key === 'Escape'){
+            lightbox.style.display = 'none';
+        }
+
+    }
+
+});
+
+</script>
+   
 
     <script type="application/ld+json">
 {
