@@ -206,11 +206,12 @@ h2 {
     gap: 20px;
 }
 
+
+
 .card {
     background: #ffffff;
     padding: 25px 30px;
     border: 1px solid #dddddd;
-    border-left: 4px solid #4a4a4a;
     border-radius: 8px;
     box-shadow: none;
     text-align: left;
@@ -218,12 +219,6 @@ h2 {
     display: flex;
     align-items: center;
     min-height: 90px;
-}
-
-.card h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 600;
 }
 /*
 .card {
